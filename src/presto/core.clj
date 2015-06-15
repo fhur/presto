@@ -25,6 +25,8 @@
     :when [1] = 2
     :when [3] = 3)"
   [test-name func & expectations]
+  {:pre [(= 0 (mod (count expectations) 4))
+         (apply = (map first (partition 4 expectations)))]}
   (let [test-name-sym (symbol test-name)]
     (concat `(deftest ~test-name-sym)
             (for [[_ args operator expected] (partition 4 expectations)]
