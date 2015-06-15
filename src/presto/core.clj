@@ -28,6 +28,7 @@
   (let [test-name-sym (symbol test-name)]
     (concat `(deftest ~test-name-sym)
             (for [[_ args operator expected] (partition 4 expectations)]
-              `(expected (apply ~func ~args) ~operator ~expected)))))
+              `(is (~operator ~(cons func args)
+                              ~expected))))))
 
 
