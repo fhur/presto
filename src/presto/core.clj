@@ -29,8 +29,9 @@
          (apply = (map first (partition 4 expectations)))]}
   (let [test-name-sym (symbol test-name)]
     (concat `(deftest ~test-name-sym)
-            (for [[_ args operator expected] (partition 4 expectations)]
-              `(is (~operator ~(cons func args)
-                              ~expected))))))
+            (for [[message args operator expected] (partition 4 expectations)]
+              (if (string? message)
+                `(is (~operator ~(cons func args) ~expected) ~message)
+                `(is (~operator ~(cons func args) ~expected)))))))
 
 
