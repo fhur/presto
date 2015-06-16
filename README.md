@@ -9,7 +9,10 @@ There are currently 2 test macros I've grown quite fond of:
 
 #### `expected`
 
-Syntax: `expected {argument} {operator} {expectation}`
+Syntax:
+```clojure
+expected {argument} {operator} {expectation}
+```
 
 Example: `(expected (inc 5) = 6)` this example passes. It tests that
 incrementing 5 by one equals 6.
@@ -25,9 +28,10 @@ Syntax:
   ...
   :when {argsN} {opN} {expectationN})
 
-Expect when takes a function as its second argument and runs the
+`expect-when` takes a function as its second argument and runs the
 function through a set of different arguments making an assertion on
 each one of them.
+```
 
 Example:
 
