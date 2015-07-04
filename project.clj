@@ -1,4 +1,4 @@
-(defproject presto "0.1.0-SNAPSHOT"
+(defproject presto "0.2.0"
   :description "A bunch of test helpers"
   :url "http://github.com/fhur/presto"
   :license {:name "Eclipse Public License"
