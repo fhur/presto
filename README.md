@@ -1,5 +1,7 @@
 # presto
 
+[![Clojars Project](http://clojars.org/presto/latest-version.svg)](http://clojars.org/presto)
+
 I'm putting the stuff I want to reuse for tests here. Not sure what's
 gonna happen to this repo in the long run.
 
