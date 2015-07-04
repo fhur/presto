@@ -25,4 +25,9 @@
  :when [1 2 3] = false
  :when [1 "1"] = false)
 
+;; You can also change the :when for a fail message
+(expected-when "a test" *
+  when [1 1] = 1
+  when [2 3] = 6)
+
 
